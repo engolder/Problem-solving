@@ -1,16 +1,19 @@
 #include<stdio.h>
- 
-int main (void){
-    int n, result = 0 ;
-    int i;
-    
-    scanf("%d", &n);
-    
-    for(i=1 ; result < 1000000000 ; i++){
-        result = 3*i*i - (3*i) + 1;
-        if(n <= result){
-            printf("%d", i);
-            break;
-        }     
-    }
+
+int main(void) {
+	int sum=1;
+	int cnt=1;
+	int k=6;
+	int n;
+	
+	scanf("%d",&n);
+	
+	while(1) {
+		if(sum>=n) break;
+		sum+=k;
+		k+=6;
+		cnt++;
+	}
+	
+	printf("%d",cnt);
 }
